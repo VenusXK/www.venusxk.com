@@ -1,0 +1,17 @@
+{
+  "name": "meprjnew",
+  "version": "1.0.1",
+  "description": "new prj of myself",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production  ",
+    "dev": "cross-env NODE_ENV=development "
+  },
+  "author": "VenusXK",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "cross-env": "^7.0.3",
+    "tailwindcss": "^3.2.4"
+  }
+}
