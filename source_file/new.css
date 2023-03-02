@@ -25,7 +25,7 @@
        
         
     #me-table-container{
-        @apply overflow-auto sm:p-0 rounded-none;
+        @apply overflow-auto sm:p-0;
     }
     #me-table{
         @apply text-sm md:text-xs sm:text-xs 
