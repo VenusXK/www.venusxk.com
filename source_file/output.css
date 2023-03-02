@@ -645,6 +645,10 @@ td {
   display: table;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-\[300\] {
   height: 300;
 }
@@ -751,4 +755,10 @@ td {
 
 .underline {
   text-decoration-line: underline;
+}
+
+@media (max-width: 1000px) {
+  .sm\:visible {
+    visibility: visible;
+  }
 }
