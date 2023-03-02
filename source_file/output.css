@@ -669,6 +669,10 @@ td {
   width: 100%;
 }
 
+.w-\[200\] {
+  width: 200;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
