@@ -7,279 +7,100 @@
     <link rel="shortcut icon" href="./favicon/doc.svg" />
     <link rel="stylesheet" href="./output.css">
 </head>
-<body style="margin:0%">
+<!-- <body style="margin:0% " class="bg-[#f5f5f7]"> -->
+    <body style="margin:0% " class="bg-white bg-gradient-to-br from-gray-100 to-white">
 
-    <div id="screen-me" class="">
-        <div id="me-post">
-            <div id="me-pic">
-                <img src="./pic/me1.jpg" alt="">
+        <!-- <div class=" w-[80%] h-[300] overflow-hidden rounded-b-3xl m-auto">
+            <img src="./pic/2.jpg" alt="" class="w-full">
+        </div> -->
+
+        <div id="content" class="overflow-hidden w-[80%] m-auto pt-20 rounded-2xl">
+            <div class="text-4xl mb-10">
+                <span class="text-black h-sc">作品集</span>
             </div>
-            <div id="me-status">
-                <div id="me-status-inner">
-                    🫥
-                </div>
+            <div class="text-2xl text-gray-500 mb-10">
+                <span>张景赫</span>
+                <a href="mailto:venusxk6214@foxmail.com"><span class="text-xl">venusxk6214@foxmail.com</span></a>
             </div>
-            <div id="me-status-hidden">
-                <div id="me-status-inner-hidden">
-                    焦虑
-                </div>
-            </div>
-            <script>
-                let me_status = document.getElementById('me-status');
-                let me_status_inner = document.getElementById('me-status-inner');
-                let me_status_hidden = document.getElementById('me-status-hidden');
-                let me_status_inner_hidden = document.getElementById('me-status-inner-hidden')
+            <span class=" text-xl text-black  w-40">2023年 中国石油大学(华东) 本三</span> 
+            <div id="me-table-container" class="mt-5 w-full">
+                <table id="me-table">
+                    <tr class="bg-white">
 
-                me_status_hidden.style.display = "none";
-                me_status_inner_hidden.style.display = "none";
+                        <td  class="bg-black">
+                            <div align=center>
+                                <img decoding="async" src="./pic/VenusXK_readme_file/yolo.png">
+                            </div>
+                        </td>
 
-                me_status.onmouseover = function(){
-                    me_status_hidden.style.display = "";
-                    me_status_inner_hidden.style.display = "";
-                    me_status.style.display = "none";
-                    me_status_inner.style.display = "none";
-                }
+                        <td  class="bg-black" >
+                            <div align=center>
+                                <img decoding="async" src="./pic/VenusXK_readme_file/material.jpg">
+                            </div>
+                        </td>
 
-                me_status_hidden.onmouseleave = function(){
-                    me_status_hidden.style.display = "none";
-                    me_status_inner_hidden.style.display = "none";
-                    me_status.style.display = "";
-                    me_status_inner.style.display = "";
-                }
-
-            </script>
-            <div id="social-media">
-                <ul class="sm:list-none">
-                    <li>🎞️ BiliBili <a href="https://space.bilibili.com/12034135" target="_blank">VenusXK</a></li>
-                    <li cl>😼 Github <a href="https://github.com/VenusXK" target="_blank">VenusXK</a></li>
-                    <li>🎮 Steam <a href="https://steamcommunity.com/id/venusxk6214/">战斗赫赫仔</a></li>
-                    <li>👀 Weibo <a href="https://weibo.com/u/5535319573" target="_blank">VenusXK</a></li>
-                    <li>🕊️ Twitter <a href="https://twitter.com/venusxk6214" target="_blank">@venusxk6214</a></li>
-                    
-                </ul>
-            </div>
-        </div>
-
-        <div id="me-inf-container">
-                你好！我是张景赫，目前在<a href="https://upc.edu.cn" target="_blank">中国石油大学(华东)</a>念书，欢迎访问我的网站 (<a href="www.venusxk.com" target="_blank">www.venusxk.com</a>)<br><br>
-                <span class="me-hidden">Nihao! My name is Jinghe Zhang, currently studying at<a href="https://english.upc.edu.cn/"> China University of Petroleum (East China)</a>, welcome to my website (<a href="www.venusxk.com">www.venusxk.com</a>)<br><br></span> 
-                <span id="me-inf-ul">
-                    <ul class="list-inside list-disc sm:list-none">
-                        <li>😋 喜欢艺术，目前在学习 <a href="https://www.blender.org" target="_blank">Blender</a> 的建模、雕刻等知识，喜欢绘画；</li>
-                        <li  class="me-hidden">😋 I like art, and I am currently learning <a href="https://www.blender.org" target="_blank">Blender</a>'s modeling, sculpting and other knowledge, and I like painting;</li>
-                        <li>🧑🏽‍💻 目前主要事情是准备考研，在学习408和数学知识；</li>
-                        <li  class="me-hidden">🧑🏽‍💻 At present, the main thing for me is to prepare for graduate school, with studying programming and some mathematical knowledge;</li>
-                        <li>📨 我的邮箱是 <a href="mailto:venusxk6214@foxmail.com">venusxk6214@foxmail.com</a> ，有需要可以联系我；</li>
-                        <li  class="me-hidden">📨 My email address is <a href="mailto:venusxk6214@foxmail.com" target="_blank">venusxk6214@foxmail.com</a>, you can contact me if you need it;</li>
-                    </ul>
-                </span><br>
-                最近在 <a href="https://github.com/VenusXK" target="_blank">Github</a>  上的更新 &nbsp; <span class="me-hidden">Recent update on <a href="https://github.com/VenusXK" target="_blank">Github</a></span> <br><br>
-                <div id="me-table-container">
-                    <table id="me-table">
-                        <tr>
-
-                            <td  class="bg-black">
-                                <div align=center>
-                                    <img decoding="async" src="./pic/VenusXK_readme_file/yolo.png">
-                                </div>
-                            </td>
-
-                            <td  class="bg-black" >
-                                <div align=center>
-                                    <img decoding="async" src="./pic/VenusXK_readme_file/material.jpg">
-                                </div>
-                            </td>
-
-                            <td>
-                                <div align=center>
-                                    <img decoding="async" src="./pic/VenusXK_readme_file/gallery.jpg" >
-                                </div>
-                            </td>
+                        <td>
+                            <div align=center>
+                                <img decoding="async" src="./pic/VenusXK_readme_file/gallery.jpg" >
+                            </div>
+                        </td>
 
 
 
-                            <td>
-                                <div align=center>
-                                    <img decoding="async" src="./pic/VenusXK_readme_file/ocr.png" >
-                                </div>
-                            </td>
-                                </tr>
-                                <tr>
-                            <td>
-                                <div align=center>
-                                    <a href="https://github.com/VenusXK/Student-Learning-Status-in-Class" target="_blank">Student Learning Status in Class</a>
-                                </div>
-                            </td>
-                            <td>
-                                <div align=center>
-                                    <a href="https://github.com/VenusXK/Reference-Image-Presenter-for-Artistic-Creation" target="_blank">Reference Image Presenter for Artistic Creation</a>
-                                </div>
-                            </td>
-                            <td>
-                                <div align=center>
-                                    <a href="https://github.com/VenusXK/My-Books-and-Film-Gallery target="_blank"">My Books and Film Gallery</a>
-                                </div>
-                            </td>
-                            <td>
-                                <div align=center>
-                                    <a href="https://github.com/VenusXK/Typographical-OCR" target="_blank">Typographical OCR</a>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
-
-
-        </div>
-
-    </div>
-
-<hr>
-
-    <div id="me-act">
-        <svg id="act-up-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">
-            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm.53 5.47a.75.75 0 00-1.06 0l-3 3a.75.75 0 101.06 1.06l1.72-1.72v5.69a.75.75 0 001.5 0v-5.69l1.72 1.72a.75.75 0 101.06-1.06l-3-3z" clip-rule="evenodd" />
-        </svg> 
-        <svg id="act-down-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">
-            <path fill-rule="evenodd" d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z" clip-rule="evenodd" />
-        </svg>
-    </div>
-
-    <span id="guide1" class="w-8 md:w-7 sm:w-4 h-8 md:h-7 sm:h-4 absolute font-normal  ml-[23%]  md:ml-[22%] sm:ml-[12%] mt-5 text-gray-500  md:mt-[18] sm:mt-[8]">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-auto h-auto  animate-pulse">
-            <path fill-rule="evenodd" d="M12 1.5a.75.75 0 01.75.75V4.5a.75.75 0 01-1.5 0V2.25A.75.75 0 0112 1.5zM5.636 4.136a.75.75 0 011.06 0l1.592 1.591a.75.75 0 01-1.061 1.06l-1.591-1.59a.75.75 0 010-1.061zm12.728 0a.75.75 0 010 1.06l-1.591 1.592a.75.75 0 01-1.06-1.061l1.59-1.591a.75.75 0 011.061 0zm-6.816 4.496a.75.75 0 01.82.311l5.228 7.917a.75.75 0 01-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 01-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 01-1.247-.606l.569-9.47a.75.75 0 01.554-.68zM3 10.5a.75.75 0 01.75-.75H6a.75.75 0 010 1.5H3.75A.75.75 0 013 10.5zm14.25 0a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H18a.75.75 0 01-.75-.75zm-8.962 3.712a.75.75 0 010 1.061l-1.591 1.591a.75.75 0 11-1.061-1.06l1.591-1.592a.75.75 0 011.06 0z" clip-rule="evenodd" />
-          </svg>
-    </span>
-
-    <script>
-        let guide1 = document.getElementById('guide1');
-        let me_act = document.getElementById('me-act');
-        let act_up_svg = document.getElementById('act-up-svg');
-        let act_down_svg = document.getElementById('act-down-svg');
-        let screen_me = document.getElementById('screen-me');
-        
-        act_up_svg.style.display="none"
-        me_act.className = "me-act-hidden";
-        
-        screen_me.style.display = "none";
-
-        act_up_svg.onclick = function(){
-            screen_me.style.display = "none";
-            act_down_svg.style.display = ""
-            act_up_svg.style.display = "none";
-            me_act.className = "me-act-hidden";
-        }
-
-        act_down_svg.onclick = function(){
-            screen_me.style.display = "";
-            act_down_svg.style.display = "none"
-            act_up_svg.style.display = "";
-            me_act.className = "me-act-visible";
-            guide1.style.display = "none";
-        }
-    </script>
-
-    <div id="screen-titlesubtitle">
-        <div id="title-content">
-            作品集<br>
-            <span class="text-gray-400">
-                Portfolios
-            </span>
-        </div>
-    </div>
-    <!-- end of screen-titlesubtitle -->
-
-    <div class="screen-portifolio">
-        <div class="portifolio-pic">
-            <img src="./pic/yolo.png" alt="" class="w-full h-full">
-        </div>
-        <div class="portifolio-description">
-            <div class="portifolio-title">
-                [2023] 基于 yolov5 的学生课堂学习状态分析
-            </div>
-            <div class="portifolio-inf">
-                Github: <a href="https://github.com/VenusXK/Student-Learning-Status-in-Class" target="_blank">https://github.com/VenusXK/Student-Learning-Status-in-Class</a><br>
-                模型效果(BiliBili): <a href="https://www.bilibili.com/video/BV19M411i7Jp/?spm_id_from=333.999.0.0" target="_blank">https://www.bilibili.com/video/BV19M411i7Jp/?spm_id_from=333.999.0.0</a><br>
-                <ol class="">
-                    <li>经过一学期拍摄共获得128张照片，经过labelimg分工标注共获得7000+行标注文件</li>
-                    <li>使用 yolov5 进行训练，得到相关模型，经验证，效果较好</li>
-                </ol>
+                        <td>
+                            <div align=center>
+                                <img decoding="async" src="./pic/VenusXK_readme_file/ocr.png" >
+                            </div>
+                        </td>
+                            </tr>
+                            <tr class="bg-[#f5f5f7]">
+                        <td>
+                            <div align=center>
+                                基于 yolov5 的学生课堂学习状态实时分析<br>
+                                <a href="https://github.com/VenusXK/Student-Learning-Status-in-Class" target="_blank">
+                                    Github
+                                </a>
+                                |<a target="_blank" href="https://www.bilibili.com/video/BV19M411i7Jp/?share_source=copy_web&vd_source=5ada95d6193fb15a68d8bea59778c362">
+                                    BiliBili
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div align=center>
+                                基于 NodeJS 的本地的艺术创作参考图展示工具<br>
+                                <a href="https://github.com/VenusXK/Reference-Image-Presenter-for-Artistic-Creation" target="_blank">
+                                    Github
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div align=center>
+                                基于 tailwindcss 的书籍和电影陈列馆<br>
+                                <a target="_blank" href="https://github.com/VenusXK/My-Books-and-Film-Gallery">
+                                    Github
+                                </a>
+                                |
+                                <a target="_blank" href=" http://www.venusxk.com/media.html">
+                                    Demo
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div align=center>
+                                基于 AlexNet 的印刷体识别
+                                <a href="https://github.com/VenusXK/Typographical-OCR" target="_blank">
+                                    Github
+                                </a>
+                            </div>
+                        </td>
+                        
+                    </tr>
+                </table>
             </div>
         </div>
-    </div>
 
-    <hr>
-
-    <div class="screen-portifolio">
-        <div class="portifolio-pic">
-            <img src="./pic/material.jpg" alt="" class="w-full h-full">
-        </div>
-        <div class="portifolio-description">
-            <div class="portifolio-title">
-                [2023] 基于 NodeJS 的本地的艺术创作参考图展示工具
-            </div>
-            <div class="portifolio-inf">
-                Github: <a href="https://github.com/VenusXK/Reference-Image-Presenter-for-Artistic-Creation" target="_blank">https://github.com/VenusXK/Reference-Image-Presenter-for-Artistic-Creation</a><br>
-                <ol>
-                    <li>前端根据目录名称，通过axios向后端(express框架)查询该目录名称下的媒体文件名称;</li>
-                    <li>后端通过fs包获取所有媒体文件名称并向前端返回图片或视频的名称，前端实现相关媒体的展示;</li>
-                </ol>
-            </div>
-        </div>
-    </div>
-
-    <hr>
-
-    <div class="screen-portifolio">
-        <div class="portifolio-pic">
-            <img src="./pic/gallery.jpg" alt="" class="w-full h-full">
-        </div>
-        <div class="portifolio-description">
-            <div class="portifolio-title">
-                [2023] 基于 tailwindcss 的书籍和电影陈列馆
-            </div>
-            <div class="portifolio-inf">
-                作品地址: <a href="http://www.venusxk.com/media.html" target="_blank">http://www.venusxk.com/media.html</a><br>
-                Github: <a href="https://github.com/VenusXK/My-Books-and-Film-Gallery" target="_blank">https://github.com/VenusXK/My-Books-and-Film-Gallery</a><br>
-                tailwindcss: <a href="https://tailwindcss.com/" target="_blank">https://tailwindcss.com</a><br>
-                利用 tailwindcss 快速构建前端页面的练习作品
-            </div>
-        </div>
-    </div>
-
-    <hr>
-    
-
-
-    <div class="screen-portifolio">
-        <div class="portifolio-pic">
-            <img src="./pic/ocr.png" alt="" class="w-full h-full">
-        </div>
-        <div class="portifolio-description">
-            <div class="portifolio-title">
-                [2023] 基于 AlexNet 的印刷体识别
-            </div>
-            <div class="portifolio-inf">
-                Github: <a href="https://github.com/VenusXK/Typographical-OCR" target="_blank">https://github.com/VenusXK/Typographical-OCR</a><br>
-                <ol class="list-inside list-decimal">
-                    <li>通过 PIL 库生成若干训练集文字图像，并通过适当旋转、腐蚀和膨胀生成大量训练集；</li>
-                    <li>使用 pytorch 根据 AlexNet 搭建人工神经网络，以 Adam 为优化器进行模型训练；</li>
-                    <li>检测未知图像时先根据像素分布对文字切割，之后对每个字进行识别</li>
-                </ol>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- ↑ detail 2 | detail left ↓ -->
-
-    <!-- start of icmp inf -->
-    <div id="screen-icmp">
+    <!-- <div id="screen-icmp">
         <a href="https://beian.miit.gov.cn/"  target="_blank" id="icp_inf"> <span>冀ICP备2023001245号</span></a>
-    </div>
-    <!-- end of icmp inf -->
+    </div> -->
 </body>
-<!-- <script src="./script/fastlook_btn.js"></script>
-<script src="./script/detail_btn.js"></script> -->
 </html>

@@ -17,124 +17,34 @@
         @apply list-inside list-decimal
     }
     td{
-        @apply w-[200] pl-3 pt-1 pb-1  pr-3 border  bg-white
+        @apply w-[200] pl-3 pt-1 pb-1 pr-3 border border-gray-300
     }
     #me-arrangement::-webkit-scrollbar {
         display:none
     }
-
-    #screen-me{
-        @apply w-screen h-[650] md:h-[550] sm:h-[550];
-        @apply bg-[#f5f5f7];
-        @apply overflow-hidden;
+       
+        
+    #me-table-container{
+        @apply overflow-auto sm:p-0 mb-8;
     }
-        #me-post{
-            @apply absolute top-12 left-[15%] md:left-[13%] sm:left-[60] 
-        }
-        #me-pic{
-            @apply w-52 md:w-36 sm:w-20 h-52 md:h-36 sm:h-20;
-            @apply rounded-2xl md:rounded-xl sm:rounded-md;
-            @apply bg-black;
-            @apply ring-4 sm:ring-2 ring-gray-300;
-            @apply overflow-hidden z-0;
-        }
-        #me-status, #me-status-hidden{
-            @apply absolute;
-            @apply  w-20 md:w-10 sm:w-7 h-20 md:h-10 sm:h-7;
-            @apply mt-[-50] md:mt-[-30] sm:mt-[-20] ml-[150] md:ml-[120] sm:ml-[60];
-            @apply ring-green-400 ring-4 sm:ring-2;
-            @apply rounded-full;
-        }
-        #me-status-inner, #me-status-inner-hidden{
-            @apply w-full h-full;
-            @apply rounded-full bg-green-300;
-            @apply text-center text-5xl md:text-2xl sm:text-base;
-            @apply pt-[14] md:pt-[4] sm:pt-[1];
-            @apply hover:cursor-pointer
-        }
-        #me-status-hidden{
-            @apply w-28 md:w-16 sm:w-14;
-            @apply ml-[120] md:ml-[90] sm:ml-[30];
-        }#me-status-inner-hidden{
-            @apply text-center text-4xl md:text-xl sm:text-base;
-            @apply text-green-600;
-            @apply pt-[18]  md:pt-[4] sm:pt-[1];
-        }
-        #social-media{
-            @apply text-sm sm:text-xs md:text-xs font-normal;
-            @apply mt-10 pl-2 sm:mt-[-80] sm:ml-[90];
-        }
-        #me-inf-container{
-            @apply w-[800] md:w-[700] sm:w-screen h-[220];
-            @apply absolute left-[35%] md:left-[30%] sm:left-[0] top-[50] sm:top-[120];
-            @apply sm:pl-14 sm:pt-8 sm:pr-14;
-            @apply md:text-sm sm:text-xs;
-        }
-        #me-inf-ul{
-            @apply font-normal text-sm md:text-xs sm:text-xs md:leading-4;
-        }
-        .me-hidden{
-            @apply sm:hidden text-gray-400;
-        }
-        #me-table-container{
-            @apply w-[full] overflow-auto sm:p-0;
-        }
-        #me-table{
-            @apply text-sm md:text-xs sm:text-xs
-        }
+    #me-table{
+        @apply text-sm md:text-xs sm:text-xs 
+    }
 
     /* start of screen-titlesubtitle */
     #screen-titlesubtitle{
-        @apply w-screen h-52 sm:h-32 md:h-40
+        @apply w-screen 
     }
-        #title-content{
-            @apply w-auto h-auto;
-            @apply ml-[20%] sm:ml-[10%]  sm:left-[10%] md:left-[15%] mt-14;
-            @apply text-5xl sm:text-4xl;
-            @apply leading-tight;
-        }
-
-
-    .me-act-hidden{
-        @apply w-20 md:w-14 sm:w-8 h-20 md:h-14 sm:h-8 absolute mt-[-30] sm:mt-[-10] md:mt-[-20] ml-[20%] sm:ml-[10%]  text-gray-200 hover:text-gray-500 hover:cursor-pointer rounded-full;
-    }
-    .me-act-visible{
-        @apply w-20 md:w-14 sm:w-8 h-20 md:h-14 sm:h-8 absolute mt-[-40] md:mt-[-30] sm:mt-[-15] ml-[20%] sm:ml-[10%]  text-gray-200 hover:text-gray-500 hover:cursor-pointer rounded-full;
+    #title-content{
+        @apply w-auto h-auto;
+        /* @apply ml-[20%] sm:ml-[10%]  sm:left-[10%] md:left-[15%] mt-14; */
+        @apply text-2xl sm:text-4xl;
+        @apply leading-tight;
     }
 
 
-
-    .screen-portifolio{
-        @apply w-screen h-[150] md:h-[120] sm:h-[190];
-        @apply m-auto mb-5 mt-5;
-    }
-        .portifolio-pic{
-            @apply w-[200] md:w-[160] sm:w-[80];
-            @apply sm:h-[60] h-full;
-            @apply ml-[20%] sm:ml-[10%];
-            @apply float-left;
-        }
-        .portifolio-description{
-            @apply w-[800] md:w-[600] sm:w-[58%];
-            @apply h-full;
-            @apply ml-[5%];
-            @apply float-left;
-        }
-        .portifolio-title{
-            @apply text-2xl md:text-base sm:text-sm;
-            @apply mb-2;
-        }
-        .portifolio-inf{
-            @apply font-normal;
-            @apply md:text-sm sm:text-xs;
-        }
-
-
-    /* #screen-icmp a{
-        @apply text-black
-    } */
     #screen-icmp{
-        @apply m-auto w-screen h-14 mt-16 text-center text-opacity-40 font-bold
+        @apply m-auto w-screen h-14 mt-40 text-center text-opacity-40 font-bold
     }
     #screen-icmp span{
         @apply   text-opacity-10
