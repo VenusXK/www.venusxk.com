@@ -554,8 +554,8 @@ td {
 }
 
 #me-table-container {
-  margin-bottom: 2rem;
   overflow: auto;
+  border-radius: 0px;
 }
 
 @media (max-width: 1000px) {
@@ -610,11 +610,10 @@ td {
 
 #screen-icmp {
   margin: auto;
-  margin-top: 10rem;
   height: 3.5rem;
-  width: 100vw;
-  text-align: center;
-  font-weight: 700;
+  width: 80%;
+  text-align: left;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --tw-text-opacity: 0.4;
 }
 
@@ -634,6 +633,14 @@ td {
   margin-top: 1.25rem;
 }
 
+.mb-\[20\] {
+  margin-bottom: 20;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
 .table {
   display: table;
 }
@@ -650,12 +657,24 @@ td {
   width: 80%;
 }
 
+.w-\[800\] {
+  width: 800;
+}
+
 .w-full {
   width: 100%;
 }
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
 }
 
 .rounded-2xl {
@@ -720,19 +739,14 @@ td {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.text-gray-500 {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-
 .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 .underline {

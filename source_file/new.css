@@ -25,7 +25,7 @@
        
         
     #me-table-container{
-        @apply overflow-auto sm:p-0 mb-8;
+        @apply overflow-auto sm:p-0 rounded-none;
     }
     #me-table{
         @apply text-sm md:text-xs sm:text-xs 
@@ -44,9 +44,9 @@
 
 
     #screen-icmp{
-        @apply m-auto w-screen h-14 mt-40 text-center text-opacity-40 font-bold
+        @apply m-auto w-[80%] h-14  text-left text-opacity-40 font-mono
     }
     #screen-icmp span{
-        @apply   text-opacity-10
+        @apply text-opacity-10
     }
 }
