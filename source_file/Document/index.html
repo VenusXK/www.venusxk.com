@@ -1,0 +1,180 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon/doc.svg" />
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="./document_o.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.2.2/axios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="github-markdown.css">
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+    </style>
+
+    <title>张景赫-学习文档</title>
+</head>
+<body>
+    <div class="w-screen h-screen">
+
+        <div class="w-[25%] h-screen float-left bg-gray-50 fixed">
+            <div class="w-full h-full overflow-x-hidden overflow-y-scroll pl-10">
+                <div class="w-full h-30 mt-10 mb-5 ml-5">
+                   
+                    <div class="left-[100px] top-[52px] text-3xl font-bold">学习文档
+                        <span style="color:#a4a4a4"><a href="www.venusxk.com">作品集</a></span>
+                        <br><br>
+                        <span class="text-xl mt-10 text-gray-500">张景赫<br></span>
+                        <span class="text-sm mt-10 text-blue-500 underline"><a href="mailto:venusxk6214@foxmail.com">venusxk6214@foxmail.com</a> </span>
+                    </div>
+                </div>
+                <ul id="dict" class="w-full ml-[10%] mr-[10%]">
+                    
+                </ul>
+            </div>
+
+        </div>
+        <div class="w-[75%] h-screen float-right">
+            <div id="content" class="markdown-body">
+                <script>
+                    document.getElementById('content').innerHTML =
+                    marked.parse("# 你好 \n这是我的学习文档")
+                    axios.get('http://127.0.0.1:8099/get_content', {
+                        params: {
+                            folder1:"VenusXK",
+                            folder2:"README.md"
+                        }
+                    }).then(response =>{
+                        // console.log()
+                        content = document.getElementById('content')
+                        content.innerHTML = response.data.content
+                    })
+                </script>
+            </div>
+            <div class="h-20">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function open(temp_id){
+        let svg_closed = document.getElementById('svg_'+temp_id+'_closed')
+        let svg_opened = document.getElementById('svg_'+temp_id+'_opened')
+        svg_closed.style.visibility = "hidden";
+        svg_opened.style.visibility = "visible";
+    }
+    function close(temp_id){
+        let svg_closed = document.getElementById('svg_'+temp_id+'_closed')
+        let svg_opened = document.getElementById('svg_'+temp_id+'_opened')
+        svg_closed.style.visibility = "visible";
+        svg_opened.style.visibility = "hidden";
+    }
+    function dicts1_circle(fn) {
+        // console.log(arguments[0].e)
+        var flag = true;
+        return function () {
+            if (flag) {
+                flag = false;
+                fn.apply(this, arguments)
+            }
+            else{
+                if(this.childNodes[1]){
+                    this.removeChild(this.childNodes[1])
+                }
+                flag = true;
+                close(this.id)
+            }
+        }
+    }
+</script>
+
+<script>
+    let axios_flag1 = 0;
+    let dict = document.getElementById("dict");
+    axios.get('http://127.0.0.1:8099/find_folder1', {
+    }).then(response =>{
+        for (enu in response.data.folders){
+            let dict1 = response.data.folders[enu]
+            dict.innerHTML += '<svg id="svg_'+ dict1 +'_closed" viewbox=" 0 0 100 100"  style="visibility:visible" class="w-3 h-3 absolute mt-4 visible"><polygon points="0,0 70,40 0,80" style="fill:#000; stroke:#000; stroke-width:1;" /></svg>'
+            + '<svg id="svg_'+ dict1 +'_opened" viewbox=" 0 0 100 100" style="visibility:hidden" class="w-3 h-3 absolute mt-4"><polygon points="0,0 40,70 80,0" style="fill:#000; stroke:#000; stroke-width:1;" /></svg>'
+            +"<li class='dict1' id='"+dict1+"'>" + dict1 + "</li>";
+        }
+        let dict1s = document.getElementsByClassName('dict1');
+        for( enu in dict1s ){
+
+            //click1
+            dict1s[enu].onclick = dicts1_circle(function(e){
+                e.stopPropagation()
+                e.preventDefault()
+                open(this.id)
+                axios.get('http://127.0.0.1:8099/find_folder2', {
+                    params: {
+                        folder1:this.id
+                    }
+                }).then(response =>{
+                    dict2_arr = response.data.folders
+                    if(dict2_arr.length>0){
+                        let node = document.createElement('ul');
+                        for(enu in dict2_arr){
+                            dict2 = dict2_arr[enu]
+                            let node_inner = document.createElement('li')
+                            node_inner.id = dict2
+                            node_inner.style.fontWeight = "normal"
+                            node_inner.className = "dict2"
+                            node_inner.innerText = dict2
+                            node_inner.style.marginLeft = "4px"
+                            node.append(node_inner)
+                        }
+                        this.appendChild(node)
+                        let dict2s = document.getElementsByClassName('dict2');
+                        // console.log(dict2s)
+                        for(enu in dict2s){
+
+                            //click2
+                            dict2s[enu].onclick = function(e){
+                                e.stopPropagation()
+                                // this.style.background = "#e5e7eb"
+                                this.style.color = "#000"
+                                this.style.fontWeight = "bold"
+                                let this_container = document.getElementById(this.id+'_container')
+                                // this_container.style.background = "#a4a4a4"
+                                let dict2s_tmp = document.getElementsByClassName('dict2');
+                                for(enu in dict2s_tmp){
+                                    // console.log(temp)
+                                    temp = dict2s_tmp[enu]
+                                    if(temp.id != this.id){
+                                        if(temp.style){
+                                            temp.style.color = "#6B7280"
+                                            temp.style.fontWeight = "normal"
+                                        }
+                                    }
+                                }
+                                console.log(this.parentElement.parentElement.id)
+                                axios.get('http://127.0.0.1:8099/get_content', {
+                                    params: {
+                                        folder1:this.parentElement.parentElement.id,
+                                        folder2:this.id
+                                    }
+                                }).then(response =>{
+                                    // console.log()
+                                    content = document.getElementById('content')
+                                    content.innerHTML = marked.parse('# okok   ### okok')
+                                    content.innerHTML = response.data.content
+                                })
+                                
+                            }
+                        }
+                    }
+                })
+            })
+        }
+    })
+</script>
+</html>

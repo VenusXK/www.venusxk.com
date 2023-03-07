@@ -19,12 +19,29 @@
     td{
         @apply w-[200] h-20 pl-3 pt-1 pb-1 pr-3 border border-gray-300
     }
+
+    #content{
+        @apply overflow-hidden w-[80%] m-auto pt-20
+    }
+    #title{
+        @apply text-4xl mb-10
+    }
+    #subtitle{
+        @apply text-2xl text-gray-500 mb-10
+    }
+    .table-title{
+        @apply  text-xl  font-mono mb-3
+    }
+    .table-container{
+        @apply w-full overflow-x-auto mb-10
+    }
+
     #me-arrangement::-webkit-scrollbar {
         display:none
     }
        
         
-    #me-table-container{
+    .wide-table{
         @apply overflow-auto sm:p-0;
     }
     #me-table{
