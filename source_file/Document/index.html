@@ -49,7 +49,7 @@
                 <script>
                     document.getElementById('content').innerHTML =
                     marked.parse("# 你好 \n这是我的学习文档")
-                    axios.get('http://127.0.0.1:8099/get_content', {
+                    axios.get('http://'+link+':8099/get_content', {
                         params: {
                             folder1:"VenusXK",
                             folder2:"README.md"
@@ -103,7 +103,7 @@
 <script>
     let axios_flag1 = 0;
     let dict = document.getElementById("dict");
-    axios.get('http://127.0.0.1:8099/find_folder1', {
+    axios.get('http://'+link+':8099/find_folder1', {
     }).then(response =>{
         for (enu in response.data.folders){
             let dict1 = response.data.folders[enu]
@@ -119,7 +119,7 @@
                 e.stopPropagation()
                 e.preventDefault()
                 open(this.id)
-                axios.get('http://127.0.0.1:8099/find_folder2', {
+                axios.get('http://'+link+':8099/find_folder2', {
                     params: {
                         folder1:this.id
                     }
@@ -162,7 +162,7 @@
                                     }
                                 }
                                 console.log(this.parentElement.parentElement.id)
-                                axios.get('http://127.0.0.1:8099/get_content', {
+                                axios.get('http://'+link+':8099/get_content', {
                                     params: {
                                         folder1:this.parentElement.parentElement.id,
                                         folder2:this.id
