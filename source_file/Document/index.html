@@ -29,7 +29,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
           </svg>
         <div id="dict_container" style="height:100%;" class="w-[25%] sm:h-screen float-left sm:float-none bg-gray-50 fixed sm:static sm:w-[100%]">
-            <div class="w-full h-full overflow-x-hidden overflow-y-scroll pl-10 sm:pl-0 ">
+            <div id="dict_scroll_container" class="w-full h-full overflow-x-hidden overflow-y-scroll pl-10 sm:pl-0 ">
                 <div class="w-full sm:h-auto mt-10 sm:mt-2 mb-5 sm:mb-2 ml-[8%] sm:ml-0">
                    
                     <div class="text-3xl font-bold md:text-xl sm:ml-[10%] sm:text-base">学习文档
@@ -54,13 +54,16 @@
             <script>
                 let dict_controler = document.getElementById('dict_show_controler');
                 let dict_container = document.getElementById('dict_container');
+                let dict_scroll_container = document.getElementById('dict_scroll_container');
                 let count = 0
                 dict_controler.onclick = function(){
                     if (count%2 == 0){
                         dict_container.style.height = '70px'
+                        dict_scroll_container.style.overflowY = "hidden"
                     }
                     else{
                         dict_container.style.height = '100%'
+                        dict_scroll_container.style.overflowY = "auto"
                     }
                     count++
                 }
