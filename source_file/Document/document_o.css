@@ -608,6 +608,10 @@ body {
   margin-top: 1rem;
 }
 
+.ml-\[8\%\] {
+  margin-left: 8%;
+}
+
 .table {
   display: table;
 }
@@ -789,6 +793,10 @@ body {
 
   .sm\:mb-2 {
     margin-bottom: 0.5rem;
+  }
+
+  .sm\:ml-\[8\%\] {
+    margin-left: 8%;
   }
 
   .sm\:hidden {
