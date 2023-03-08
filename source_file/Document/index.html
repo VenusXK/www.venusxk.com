@@ -26,29 +26,31 @@
     </script>
     <div class="w-screen h-screen">
 
-        <div class="w-[25%] h-screen float-left bg-gray-50 fixed sm:w-[85%]">
+        <div class="w-[25%] h-screen sm:h-min float-left sm:float-none bg-gray-50 fixed sm:static sm:w-[100%]">
             <div class="w-full h-full overflow-x-hidden overflow-y-scroll pl-10 sm:pl-0">
-                <div class="w-full h-30 mt-10 mb-5 ml-5">
+                <div class="w-full h-30 mt-10 sm:mt-2 mb-5 sm:mb-2 ml-5 sm:ml-0">
                    
-                    <div class="top-[52px] text-3xl font-bold md:text-xl sm:text-base">学习文档
+                    <div class="text-3xl font-bold md:text-xl sm:ml-[10%] sm:text-base">学习文档
                         <span style="color:#a4a4a4"><a href="http://www.venusxk.com">作品集</a></span>
-                        <br><br>
-                        <span class="text-xl mt-10 text-gray-500 md:text-xl sm:text-base">张景赫<br></span>
-                        <span class="text-sm mt-10 text-blue-500 underline"><a href="mailto:venusxk6214@foxmail.com">venusxk6214@foxmail.com</a> </span>
+                        <br>
+                        <span class="sm:hidden"><br></span>
+                        <span class="text-xl mt-10 text-gray-500 md:text-xl sm:text-base">张景赫</span>
+                        <span class="sm:hidden"><br></span>
+                        <span class="text-sm mt-10 "><a href="mailto:venusxk6214@foxmail.com">venusxk6214@foxmail.com</a> </span>
                     </div>
 
                 </div>
-                <ul id="dict" class="w-full ml-[10%] sm:ml-5 mr-[10%]">
+                <ul id="dict" class="w-full ml-[10%] sm:ml-8 mr-[10%]">
                     
                 </ul>
             </div>
 
         </div>
-        <div class="w-[75%] h-screen float-right">
+        <div class="w-[75%] sm:w-auto h-screen float-right sm:float-none">
             <div id="content" class="markdown-body">
                 <script>
                     document.getElementById('content').innerHTML =
-                    marked.parse("# 你好 \n这是我的学习文档")
+                    marked.parse("# 首页文档加载中...")
                     axios.get('http://'+link+':8099/get_content', {
                         params: {
                             folder1:"VenusXK",
