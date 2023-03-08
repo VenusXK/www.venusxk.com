@@ -21,7 +21,7 @@
     }
 
     #content{
-        @apply overflow-hidden w-[80%] m-auto pt-20
+        @apply overflow-hidden w-[80%] m-auto pt-20 sm:pt-10
     }
     #title{
         @apply text-4xl mb-10
