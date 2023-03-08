@@ -785,6 +785,10 @@ td {
   width: 100vw;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 @keyframes pulse {
   50% {
     opacity: .5;
@@ -830,6 +834,16 @@ td {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-br {
