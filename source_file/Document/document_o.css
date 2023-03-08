@@ -659,6 +659,10 @@ body {
   margin-top: 1rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .block {
   display: block;
 }
@@ -719,6 +723,10 @@ body {
   height: auto;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
 .w-3 {
   width: 0.75rem;
 }
@@ -777,6 +785,14 @@ body {
 
 .w-7 {
   width: 1.75rem;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-14 {
+  width: 3.5rem;
 }
 
 @keyframes pulse {
@@ -884,6 +900,16 @@ body {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
