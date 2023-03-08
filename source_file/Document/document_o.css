@@ -572,10 +572,6 @@ body {
   position: absolute;
 }
 
-.top-\[52px\] {
-  top: 52px;
-}
-
 .float-right {
   float: right;
 }
@@ -588,12 +584,8 @@ body {
   margin-bottom: 1.25rem;
 }
 
-.ml-5 {
-  margin-left: 1.25rem;
-}
-
-.ml-\[10\%\] {
-  margin-left: 10%;
+.ml-\[8\%\] {
+  margin-left: 8%;
 }
 
 .mr-\[10\%\] {
@@ -608,8 +600,8 @@ body {
   margin-top: 1rem;
 }
 
-.ml-\[8\%\] {
-  margin-left: 8%;
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .table {
@@ -634,6 +626,18 @@ body {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-40 {
+  height: 10rem;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-4 {
+  height: 1rem;
 }
 
 .w-3 {
@@ -662,6 +666,10 @@ body {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-auto {
+  width: auto;
 }
 
 .overflow-x-hidden {
@@ -743,36 +751,16 @@ body {
     position: static;
   }
 
-  .sm\:top-8 {
-    top: 2rem;
-  }
-
-  .sm\:top-2 {
-    top: 0.5rem;
-  }
-
   .sm\:float-none {
     float: none;
   }
 
-  .sm\:ml-5 {
-    margin-left: 1.25rem;
+  .sm\:mb-2 {
+    margin-bottom: 0.5rem;
   }
 
-  .sm\:mt-\[-10\] {
-    margin-top: -10;
-  }
-
-  .sm\:mt-\[-10px\] {
-    margin-top: -10px;
-  }
-
-  .sm\:ml-10 {
-    margin-left: 2.5rem;
-  }
-
-  .sm\:ml-8 {
-    margin-left: 2rem;
+  .sm\:ml-0 {
+    margin-left: 0px;
   }
 
   .sm\:ml-\[10\%\] {
@@ -783,28 +771,24 @@ body {
     margin-top: 0.5rem;
   }
 
-  .sm\:ml-2 {
-    margin-left: 0.5rem;
+  .sm\:mb-4 {
+    margin-bottom: 1rem;
   }
 
-  .sm\:ml-0 {
-    margin-left: 0px;
+  .sm\:mb-14 {
+    margin-bottom: 3.5rem;
   }
 
-  .sm\:mb-2 {
-    margin-bottom: 0.5rem;
+  .sm\:mb-5 {
+    margin-bottom: 1.25rem;
   }
 
-  .sm\:ml-\[8\%\] {
-    margin-left: 8%;
+  .sm\:mb-10 {
+    margin-bottom: 2.5rem;
   }
 
   .sm\:hidden {
     display: none;
-  }
-
-  .sm\:h-auto {
-    height: auto;
   }
 
   .sm\:h-min {
@@ -812,16 +796,12 @@ body {
     height: min-content;
   }
 
-  .sm\:w-\[85\%\] {
-    width: 85%;
+  .sm\:h-auto {
+    height: auto;
   }
 
   .sm\:w-\[100\%\] {
     width: 100%;
-  }
-
-  .sm\:w-screen {
-    width: 100vw;
   }
 
   .sm\:w-auto {
@@ -832,22 +812,9 @@ body {
     padding-left: 0px;
   }
 
-  .sm\:pt-\[-10px\] {
-    padding-top: -10px;
-  }
-
-  .sm\:pt-\[-100px\] {
-    padding-top: -100px;
-  }
-
   .sm\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .sm\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
   }
 }
 
