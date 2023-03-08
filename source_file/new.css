@@ -11,12 +11,12 @@
     a{
         @apply text-purple-400 hover:text-purple-600
     }
-    ul{
+    /* ul{
         @apply list-inside list-disc
     }
     ol{
         @apply list-inside list-decimal
-    }
+    } */
     td{
         @apply w-[200] h-20 pl-3 pt-1 pb-1 pr-3 border border-gray-300
     }

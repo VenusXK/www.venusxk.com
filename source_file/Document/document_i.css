@@ -18,4 +18,7 @@
     .dict li li{
         @apply w-full p-2 hover:cursor-pointer text-sm font-normal hover:underline text-gray-500  border-none
     }
+    #content li{
+        list-style:disc;
+    }
 }
