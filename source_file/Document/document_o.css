@@ -631,6 +631,10 @@ body {
   right: 15%;
 }
 
+.right-\[8\%\] {
+  right: 8%;
+}
+
 .float-right {
   float: right;
 }
@@ -707,6 +711,10 @@ body {
   height: 3rem;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
 .w-3 {
   width: 0.75rem;
 }
@@ -761,6 +769,10 @@ body {
 
 .w-12 {
   width: 3rem;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 .overflow-x-hidden {
