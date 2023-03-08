@@ -25,8 +25,10 @@
         let link = "122.9.163.105"
     </script>
     <div class="w-screen h-screen">
-
-        <div class="w-[25%] h-screen sm:h-min float-left sm:float-none bg-gray-50 fixed sm:static sm:w-[100%]">
+        <svg id="dict_show_controler" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 absolute right-[15%] sm:visible md:hidden lg:hidden top-3 text-purple-400 hover:text-purple-600 hover:cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
+          </svg>
+        <div id="dict_container" style="height:100%;" class="w-[25%] sm:h-screen float-left sm:float-none bg-gray-50 fixed sm:static sm:w-[100%]">
             <div class="w-full h-full overflow-x-hidden overflow-y-scroll pl-10 sm:pl-0 ">
                 <div class="w-full sm:h-auto mt-10 sm:mt-2 mb-5 sm:mb-2 ml-[8%] sm:ml-0">
                    
@@ -48,7 +50,21 @@
                         <li><span style="color:#a4a4a4"><a href="http://www.venusxk.com">作品集</a></span></li>
                     </ul>
                 </div>
-            </div>
+            </div>          
+            <script>
+                let dict_controler = document.getElementById('dict_show_controler');
+                let dict_container = document.getElementById('dict_container');
+                let count = 0
+                dict_controler.onclick = function(){
+                    if (count%2 == 0){
+                        dict_container.style.height = '70px'
+                    }
+                    else{
+                        dict_container.style.height = '100%'
+                    }
+                    count++
+                }
+              </script>
 
         </div>
         <div class="w-[75%] sm:w-auto h-screen float-right sm:float-none">
@@ -79,14 +95,14 @@
     function open(temp_id){
         let svg_closed = document.getElementById('svg_'+temp_id+'_closed')
         let svg_opened = document.getElementById('svg_'+temp_id+'_opened')
-        svg_closed.style.visibility = "hidden";
-        svg_opened.style.visibility = "visible";
+        svg_closed.style.display = "none";
+        svg_opened.style.display = "block";
     }
     function close(temp_id){
         let svg_closed = document.getElementById('svg_'+temp_id+'_closed')
         let svg_opened = document.getElementById('svg_'+temp_id+'_opened')
-        svg_closed.style.visibility = "visible";
-        svg_opened.style.visibility = "hidden";
+        svg_closed.style.display = "block";
+        svg_opened.style.display = "none";
     }
     function dicts1_circle(fn) {
         // console.log(arguments[0].e)
@@ -114,8 +130,8 @@
     }).then(response =>{
         for (enu in response.data.folders){
             let dict1 = response.data.folders[enu]
-            dict.innerHTML += '<svg id="svg_'+ dict1 +'_closed" viewbox=" 0 0 100 100"  style="visibility:visible" class="w-3 h-3 absolute mt-4 visible"><polygon points="0,0 70,40 0,80" style="fill:#000; stroke:#000; stroke-width:1;" /></svg>'
-            + '<svg id="svg_'+ dict1 +'_opened" viewbox=" 0 0 100 100" style="visibility:hidden" class="w-3 h-3 absolute mt-4"><polygon points="0,0 40,70 80,0" style="fill:#000; stroke:#000; stroke-width:1;" /></svg>'
+            dict.innerHTML += '<svg id="svg_'+ dict1 +'_closed" viewbox=" 0 0 100 100"  style="display:block" class="w-3 h-3 float-left mt-4"><polygon points="0,0 70,40 0,80" style="fill:#000; stroke:#000; stroke-width:1;" /></svg>'
+            + '<svg id="svg_'+ dict1 +'_opened" viewbox=" 0 0 100 100" style="display:none" class="w-3 h-3 float-left mt-4"><polygon points="0,0 40,70 80,0" style="fill:#000; stroke:#000; stroke-width:1;" /></svg>'
             +"<li class='dict1' id='"+dict1+"'>" + dict1 + "</li>";
         }
         let dict1s = document.getElementsByClassName('dict1');
