@@ -529,7 +529,19 @@ body {
   font-weight: 400;
 }
 
-#dict li {
+.dict {
+  margin-left: 8%;
+  margin-right: 10%;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .dict {
+    margin-left: 10%;
+  }
+}
+
+.dict li {
   margin-left: 0.5rem;
   width: 70%;
   border-bottom-width: 1px;
@@ -540,11 +552,11 @@ body {
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
-#dict li:hover {
+.dict li:hover {
   cursor: pointer;
 }
 
-#dict li li {
+.dict li li {
   width: 100%;
   border-style: none;
   padding: 0.5rem;
@@ -555,7 +567,7 @@ body {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
-#dict li li:hover {
+.dict li li:hover {
   cursor: pointer;
   text-decoration-line: underline;
 }
@@ -588,20 +600,12 @@ body {
   margin-left: 8%;
 }
 
-.mr-\[10\%\] {
-  margin-right: 10%;
-}
-
 .mt-10 {
   margin-top: 2.5rem;
 }
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
 }
 
 .table {
@@ -620,24 +624,16 @@ body {
   height: 0.75rem;
 }
 
+.h-4 {
+  height: 1rem;
+}
+
 .h-full {
   height: 100%;
 }
 
 .h-screen {
   height: 100vh;
-}
-
-.h-40 {
-  height: 10rem;
-}
-
-.h-10 {
-  height: 2.5rem;
-}
-
-.h-4 {
-  height: 1rem;
 }
 
 .w-3 {
@@ -660,16 +656,16 @@ body {
   width: 800;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .w-full {
   width: 100%;
 }
 
 .w-screen {
   width: 100vw;
-}
-
-.w-auto {
-  width: auto;
 }
 
 .overflow-x-hidden {
@@ -742,6 +738,16 @@ body {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
+.text-purple-300 {
+  --tw-text-opacity: 1;
+  color: rgb(216 180 254 / var(--tw-text-opacity));
+}
+
+.text-purple-400 {
+  --tw-text-opacity: 1;
+  color: rgb(192 132 252 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -771,33 +777,17 @@ body {
     margin-top: 0.5rem;
   }
 
-  .sm\:mb-4 {
-    margin-bottom: 1rem;
-  }
-
-  .sm\:mb-14 {
-    margin-bottom: 3.5rem;
-  }
-
-  .sm\:mb-5 {
-    margin-bottom: 1.25rem;
-  }
-
-  .sm\:mb-10 {
-    margin-bottom: 2.5rem;
-  }
-
   .sm\:hidden {
     display: none;
+  }
+
+  .sm\:h-auto {
+    height: auto;
   }
 
   .sm\:h-min {
     height: -moz-min-content;
     height: min-content;
-  }
-
-  .sm\:h-auto {
-    height: auto;
   }
 
   .sm\:w-\[100\%\] {
