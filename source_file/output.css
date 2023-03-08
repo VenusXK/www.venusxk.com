@@ -548,7 +548,7 @@ td {
   padding-right: 0.75rem;
 }
 
-#content {
+#document_content_container #content {
   margin: auto;
   width: 80%;
   overflow: hidden;
@@ -556,7 +556,7 @@ td {
 }
 
 @media (max-width: 1000px) {
-  #content {
+  #document_content_container #content {
     width: 90%;
     padding-top: 1.25rem;
   }
@@ -904,16 +904,12 @@ td {
     margin-left: 0px;
   }
 
-  .sm\:ml-\[10\%\] {
-    margin-left: 10%;
+  .sm\:ml-\[5\%\] {
+    margin-left: 5%;
   }
 
   .sm\:mt-2 {
     margin-top: 0.5rem;
-  }
-
-  .sm\:ml-\[5\%\] {
-    margin-left: 5%;
   }
 
   .sm\:hidden {

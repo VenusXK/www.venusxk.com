@@ -21,7 +21,7 @@
         @apply w-[200] h-20 pl-3 pt-1 pb-1 pr-3 border border-gray-300
     }
 
-    #content{
+    #document_content_container #content{
         @apply overflow-hidden w-[80%] m-auto pt-20 sm:pt-5 sm:w-[90%]
     }
     #title{
