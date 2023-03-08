@@ -58,8 +58,11 @@
                 let dict_container = document.getElementById('dict_container');
                 let dict_scroll_container = document.getElementById('dict_scroll_container');
                 let count = 0
-                dict_container.style.height = '70px'
-                dict_scroll_container.style.overflowY = "hidden"
+                console.log(window.screen.width)
+                if(window.screen.width<1000){
+                    dict_container.style.height = '70px'
+                    dict_scroll_container.style.overflowY = "hidden"
+                }
                 dict_controler.onclick = function(){
                     if (count%2 == 1){
                         dict_container.style.height = '70px'
