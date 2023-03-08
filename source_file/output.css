@@ -912,6 +912,10 @@ td {
     margin-top: 0.5rem;
   }
 
+  .sm\:ml-\[5\%\] {
+    margin-left: 5%;
+  }
+
   .sm\:hidden {
     display: none;
   }
