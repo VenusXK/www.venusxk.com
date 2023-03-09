@@ -529,6 +529,11 @@ body {
   font-weight: 400;
 }
 
+input:checked {
+  --tw-bg-opacity: 1;
+  background-color: rgb(126 34 206 / var(--tw-bg-opacity));
+}
+
 .dict {
   margin-left: 8%;
   margin-right: 10%;
