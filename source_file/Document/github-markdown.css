@@ -46,7 +46,7 @@
   }
 } */
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) { */
   .markdown-body {
     color-scheme: light;
     --color-prettylights-syntax-comment: #6e7781;
@@ -92,7 +92,7 @@
     --color-attention-subtle: #fff8c5;
     --color-danger-fg: #cf222e;
   }
-}
+/* } */
 
 .markdown-body {
   -ms-text-size-adjust: 100%;
