@@ -10,7 +10,7 @@
         @apply font-normal text-base
     }
     input:checked{
-        @apply bg-purple-700
+        background: blue;
     }
     .dict{
         @apply w-full ml-[8%] sm:ml-[10%] mr-[10%]
