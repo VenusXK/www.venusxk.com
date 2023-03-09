@@ -168,7 +168,7 @@
                         folder1:this.id
                     }
                 }).then(response =>{
-                    dict2_arr = response.data.folders
+                    dict2_arr = response.data.folders.split('.')[0]
                     if(dict2_arr.length>0){
                         let node = document.createElement('ul');
                         for(enu in dict2_arr){
