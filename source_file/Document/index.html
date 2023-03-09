@@ -188,6 +188,7 @@
 
                             //click2
                             dict2s[enu].onclick = function(e){
+                                content.innerHTML = ""
                                 e.stopPropagation()
                                 // this.style.background = "#e5e7eb"
                                 this.style.color = "#000"
@@ -213,7 +214,6 @@
                                     }
                                 }).then(response =>{
                                     // console.log()
-                                    content = document.getElementById('content')
                                     content.innerHTML = marked.parse('# okok   ### okok')
                                     content.innerHTML = response.data.content
                                 })
