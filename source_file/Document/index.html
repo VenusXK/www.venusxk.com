@@ -168,11 +168,11 @@
                         folder1:this.id
                     }
                 }).then(response =>{
-                    dict2_arr = response.data.folders.split('.')[0]
+                    dict2_arr = response.data.folders
                     if(dict2_arr.length>0){
                         let node = document.createElement('ul');
                         for(enu in dict2_arr){
-                            dict2 = dict2_arr[enu]
+                            dict2 = dict2_arr[enu].split('.')[0]
                             let node_inner = document.createElement('li')
                             node_inner.id = dict2
                             node_inner.style.fontWeight = "normal"
