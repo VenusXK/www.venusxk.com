@@ -9,9 +9,6 @@
     body{
         @apply font-normal text-base
     }
-    input:checked{
-        background: blue;
-    }
     .dict{
         @apply w-full ml-[8%] sm:ml-[10%] mr-[10%]
     }

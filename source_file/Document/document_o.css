@@ -529,10 +529,6 @@ body {
   font-weight: 400;
 }
 
-input:checked{
-  background: blue;
-}
-
 .dict {
   margin-left: 8%;
   margin-right: 10%;
