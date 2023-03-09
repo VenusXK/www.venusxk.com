@@ -571,9 +571,9 @@ body {
   text-decoration-line: underline;
 }
 
-#document_content_container #content li{
-  list-style:disc;
-}
+/* #document_content_container #content li{
+        list-style:disc;
+    } */
 
 #document_content_container #content {
   margin: auto;
