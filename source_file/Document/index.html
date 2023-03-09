@@ -174,10 +174,10 @@
                         for(enu in dict2_arr){
                             dict2 = dict2_arr[enu].split('.')[0]
                             let node_inner = document.createElement('li')
-                            node_inner.id = dict2
+                            node_inner.id = dict2+'.md'
                             node_inner.style.fontWeight = "normal"
                             node_inner.className = "dict2"
-                            node_inner.innerText = dict2+'.md'
+                            node_inner.innerText = dict2
                             node_inner.style.marginLeft = "4px"
                             node.append(node_inner)
                         }
@@ -190,11 +190,9 @@
                             dict2s[enu].onclick = function(e){
                                 content.innerHTML = ""
                                 e.stopPropagation()
-                                // this.style.background = "#e5e7eb"
                                 this.style.color = "#000"
                                 this.style.fontWeight = "bold"
                                 let this_container = document.getElementById(this.id+'_container')
-                                // this_container.style.background = "#a4a4a4"
                                 let dict2s_tmp = document.getElementsByClassName('dict2');
                                 for(enu in dict2s_tmp){
                                     // console.log(temp)
