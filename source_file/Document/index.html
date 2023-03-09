@@ -188,11 +188,6 @@
 
                             //click2
                             dict2s[enu].onclick = function(e){
-                                if(window.screen.width<1000){
-                                    dict_container.style.height = '70px'
-                                    dict_scroll_container.style.overflowY = "hidden"
-                                    count += 1
-                                }
                                 e.stopPropagation()
                                 // this.style.background = "#e5e7eb"
                                 this.style.color = "#000"
@@ -222,7 +217,11 @@
                                     content.innerHTML = marked.parse('# okok   ### okok')
                                     content.innerHTML = response.data.content
                                 })
-                                
+                                if(window.screen.width<1000){
+                                    dict_container.style.height = '70px'
+                                    dict_scroll_container.style.overflowY = "hidden"
+                                    count += 1
+                                }
                             }
                         }
                     }
