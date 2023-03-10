@@ -21,74 +21,47 @@
 
 输出哪一个标号的银币是假币，并说明它比真币轻还是重(heavy or light)。
 
+### 输入样例
+
+#### 输入
+
+```
+24
+```
+
+#### 输出
+
+```
+Cube = 6, Triple = (3,4,5)
+Cube = 12, Triple = (6,8,10)
+Cube = 18, Triple = (2,12,16)
+Cube = 18, Triple = (9,12,15)
+Cube = 19, Triple = (3,10,18)
+Cube = 20, Triple = (7,14,17)
+Cube = 24, Triple = (12,16,20)
+```
+
 ### 实现代码
 
 ```cpp
-#include<bits/stdc++.h>
+#include <iostream>
  
 using namespace std;
-char Left [3][7],Right [3][7],result [3][7];
-//strchr(str,x)     :在字符串str中查找x出现的位置，返回位置，不存在，返回NULL
-bool isLight(char x){   //验证硬币x比真币轻
-    for(int i=0;i<3;i++)
-    {
-        switch(result[i][0])
-        {   //有矛盾的情况下
-            case 'u':if(strchr(Right[i],x)==NULL)
-            return false;
-            break;
-            case 'e':if(strchr(Right[i],x)!=NULL || strchr(Left[i],x)!=NULL)
-            return false;
-            break;
-            case 'd':if(strchr(Left[i],x)==NULL)
-            return false;
-            break;
-        }
-    }
-    return true;//和真实数据不矛盾
-}
-bool isHeavy(char x){   //验证硬币x比真币轻
-    for(int i=0;i<3;i++)
-    {
-        switch(result[i][0])
-        {   //有矛盾的情况下
-            case 'u':if(strchr(Left[i],x)==NULL)
-            return false;
-            break;
-            case 'e':if(strchr(Right[i],x)!=NULL || strchr(Left[i],x)!=NULL)
-            return false;
-            break;
-            case 'd':if(strchr(Right[i],x)==NULL)
-            return false;
-            break;
-        }
-    }
-    return true;
-}
  
-int main(int argc, char** argv)
-{
-char ch;
-int n;
-cin>>n;
-while(n--)
-{
-    for(int i=0;i<3;i++)
-    cin>>Left[i]>>Right[i]>>result[i];
-    for(ch='A';ch<='L';ch++)//返回true
-    {
-        if(isLight(ch)) 
-        {
-            cout<<ch<<" is the counterfeit coin and it is light. "<<endl;
-        break;
-        }
-        if(isHeavy(ch)) 
-        {
-            cout<<ch<<" is the counterfeit coin and it is heavy. "<<endl;
-        break;
-        }
-    }
-}
-return 0;
+int main(){
+	int n;
+	cin>>n;
+	for(int i=2;i<=n;i++){
+		for(int j=2;j<i;j++){
+			for(int k=j+1;k<i;k++){
+				for(int l=k+1;l<i;l++){
+					if(i*i*i==j*j*j+k*k*k+l*l*l){
+						cout << "Cube = "<<i<<", Triple = ("<<j<<","<<k<<","<<l<<")"<<endl;
+					}
+				}
+			}
+		}
+	}
+	return 0;
 }
 ```
