@@ -733,6 +733,10 @@ td {
   height: 100vh;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
 .w-14 {
   width: 3.5rem;
 }
